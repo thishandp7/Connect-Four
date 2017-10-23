@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="ConnectFour_CSCI440Project_v01">
+    <file>Resources/board_BG.png</file>
+    <file>board_BG.png</file>
+    <file>Resources/arrow.png</file>
+    <file>Resources/yellow.png</file>
+    <file>Resources/red.png</file>
+  </qresource>
+</RCC>
