@@ -1,12 +1,10 @@
-# Connect-Four
+# Connect Four
 
-This project was created for the CSCI 440 (Introduction to Artificial Intelligence) course in SCSU.
+This project was part of the CSCI 440 Introduction to Artificial Intelligence coursework in SCSU.
 
-This project intends to study artificial intelligence. We wanted to determine the effect of ply depth (the number of plies, which are turns by a single player that the 
-program looks ahead). Moreover, the effect of getting the first move on the chance of winning. To do this, I wrote a connect four game in C++ to simulate gameplay 
-between computer-controlled players. I found out that increasing the ply depth increases the chance of winning, as does getting the first move. I found that the effect 
-of a single ply-depth increase was more significant than the effect of getting the first move. I also found that when two identical players faced off, there would be 
-more draws if both had even ply depths.
+The intention of this project was to build a Connect Four game that plays against a human opponent. To achieve this, I implemented the core game mechanics in C++ and implemented the UI with the Qt library.
+
+To determine the next winning move for the AI, I implemented a [minimax](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/) algorithm with a static evaluation function (check below for more information on the SEF)
 
 ## Using the program:
 ### Download and Installation:
@@ -20,7 +18,7 @@ more draws if both had even ply depths.
 
 ### Reason for choosing Connect Four
 
-Unlike, chess or other mildly complex games, connect four is simple and this will help me focus on the study rather than simulating a complex gameplay. There are a relatively small number of possible moves at any given point in the game, limiting the combinatorial explosion. However, the game still allows a rich depth of strategy, unlike games such as tic-tac-toe.
+Unlike chess or other mildly complex games, connect four is simple, and this will help me focus on the study rather than simulating complex gameplay. There are a relatively small number of possible moves at any given point in the game, limiting the combinatorial explosion. However, the game still allows a rich depth of strategy, unlike games such as tic-tac-toe.
 
   - A 2D array was used to represent the board.
       | `0` | `0`  | `0`  | `0`  | `0`  | `0`  | `0`  |
@@ -36,7 +34,7 @@ Unlike, chess or other mildly complex games, connect four is simple and this wil
   - Minimax algorithm was used to determine the next move made by the AI.
 
 ### Static Evaluation function:
-The static evaluation function of this game is implemented by assigning scores to each cell on the board. Those scores are based on how many four disks can be formed form that particular cell in all eight directions. The representations of the scores on the boards are shown as below.
+The static evaluation function of this game is implemented by assigning scores to each cell on the board. Those scores are based on how many four disks can be formed from that particular cell in all eight directions. The representations of the scores on the boards are shown as below.
 
 | `3` | `4`  | `5`  | `7`  | `5`  | `4`  | `3`  |
 | - | - | - | - | - | - | - |
